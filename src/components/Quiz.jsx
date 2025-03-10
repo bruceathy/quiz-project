@@ -1,11 +1,13 @@
 import { useState } from "react";
+import QUESTIONS from "../questions.js";
 
 export default function Quiz() {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
+
+  const activeQuestionIndex = userAnswers.length;
   return (
     <div>
-      <p>Current Question: {currentQuestion}</p>
+      <p>Current Question: {activeQuestionIndex}</p>
     </div>
   );
 }
